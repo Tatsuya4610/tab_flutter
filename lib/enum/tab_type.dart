@@ -4,10 +4,10 @@ import 'package:tab_flutter/love/love_navigator.dart';
 import 'package:tab_flutter/report/report_navigator.dart';
 import 'package:tab_flutter/setting/setting_navigator.dart';
 
-final _marketGlobalKey = GlobalKey<NavigatorState>();
-final _mediaGlobalKey = GlobalKey<NavigatorState>();
-final _listingGlobalKey = GlobalKey<NavigatorState>();
-final _favoriteGlobalKey = GlobalKey<NavigatorState>();
+final _homeGlobalKey = GlobalKey<NavigatorState>();
+final _loveGlobalKey = GlobalKey<NavigatorState>();
+final _reportGlobalKey = GlobalKey<NavigatorState>();
+final _settingGlobalKey = GlobalKey<NavigatorState>();
 
 enum TabType {
   home,
@@ -46,13 +46,13 @@ extension TabTypeEx on TabType {
   GlobalKey<NavigatorState> get globalKey {
     switch (this) {
       case TabType.home:
-        return _marketGlobalKey;
+        return _homeGlobalKey;
       case TabType.love:
-        return _mediaGlobalKey;
+        return _loveGlobalKey;
       case TabType.report:
-        return _listingGlobalKey;
+        return _reportGlobalKey;
       case TabType.setting:
-        return _favoriteGlobalKey;
+        return _settingGlobalKey;
     }
   }
 
