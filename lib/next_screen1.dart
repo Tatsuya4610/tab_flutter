@@ -1,24 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 
-import '../next_screen1.dart';
+import 'next_screen2.dart';
 
-class HomeScreen extends HookWidget {
+class Screen1 extends StatelessWidget {
+  const Screen1({Key? key}) : super(key: key);
+
+  static Route<dynamic> route() {
+    return MaterialPageRoute<dynamic>(
+      builder: (_) => const Screen1(),
+    );
+  }
+
+
   @override
   Widget build(BuildContext context) {
-    useEffect(() {
-      print('HomeScreen');
-    }, const []);
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Home'),
-      ),
+      appBar: AppBar(title: Text('Screen1'),),
       body: Center(
         child: TextButton(
           child: Text('次のページへ'),
           onPressed: () {
             Navigator.of(context).push<void>(
-              Screen1.route(),
+              Screen2.route(),
             );
           },
         ),
