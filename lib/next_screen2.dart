@@ -9,19 +9,26 @@ class Screen2 extends StatelessWidget {
     );
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Screen２'),),
+      appBar: AppBar(
+        title: Text('Screen２'),
+      ),
       body: Center(
-        child: TextButton(
-          child: Text('次のページへ'),
-          onPressed: () {
-            Navigator.of(context).push<void>(
-              Screen2.route(),
-            );
-          },
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            TextButton(
+              child: Text('次のページへ'),
+              onPressed: () {
+                Navigator.of(context).push<void>(
+                  Screen2.route(),
+                );
+              },
+            ),
+            Text('homeタブを押すと最初に戻る')
+          ],
         ),
       ),
     );
