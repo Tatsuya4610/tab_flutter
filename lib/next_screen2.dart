@@ -14,6 +14,7 @@ class Screen2 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Screen２'),
+        backgroundColor: Colors.red,
       ),
       body: Center(
         child: Column(
@@ -27,7 +28,6 @@ class Screen2 extends StatelessWidget {
                 );
               },
             ),
-            Text('homeタブを押すと最初に戻る')
           ],
         ),
       ),

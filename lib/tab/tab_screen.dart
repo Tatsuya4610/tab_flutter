@@ -31,20 +31,11 @@ class TabsScreen extends HookWidget {
         ),
         bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
-          unselectedItemColor: Colors.grey,
-          selectedItemColor: Colors.black,
-          selectedLabelStyle: const TextStyle(fontSize: 10),
-          unselectedLabelStyle: const TextStyle(fontSize: 10),
           items: TabType.values.map((type) => createTab(ctx, type)).toList(),
           onTap: (value) {
             final selectedTab = TabType.values[value];
-            if (selectedTab == tabType.value) {
-              selectedTab.globalKey.currentState!.popUntil(
-                (route) => route.isFirst,
-              );
-            } else {
-              tabType.value = selectedTab;
-            }
+
+            tabType.value = selectedTab;
           },
           currentIndex: type.index,
         ),
