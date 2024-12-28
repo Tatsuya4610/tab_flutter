@@ -12,6 +12,7 @@ class HomeScreen extends HookWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Home'),
+        backgroundColor: Colors.blue,
       ),
       body: Center(
         child: TextButton(

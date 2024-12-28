@@ -10,6 +10,7 @@ class SettingScreen extends HookWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Setting'),
+        backgroundColor: Colors.blue,
       ),
       body: Center(
         child: Text('Setting'),

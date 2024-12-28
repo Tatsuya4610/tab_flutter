@@ -10,6 +10,7 @@ class LoveScreen extends HookWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Love'),
+        backgroundColor: Colors.blue,
       ),
       body: Center(
         child: Text('Love'),

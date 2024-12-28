@@ -11,6 +11,7 @@ class ReportScreen extends HookWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Report'),
+        backgroundColor: Colors.blue,
       ),
       body: Center(
         child: Text('Report'),
